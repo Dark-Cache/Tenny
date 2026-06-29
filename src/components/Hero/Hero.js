@@ -38,7 +38,7 @@ function Hero() {
               Book Appointment
             </a>
 
-            <a href="#services" className="secondary-btn">
+            <a href="services" className="secondary-btn">
               Explore Services
             </a>
 
