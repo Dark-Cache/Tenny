@@ -7,19 +7,40 @@ import {
   FaTiktok,
   FaPaperPlane,
 } from "react-icons/fa";
+import { useForm, ValidationError } from "@formspree/react";
+import { useEffect, useState } from "react";
 
 function Contact() {
+  const [state, handleSubmit] = useForm("mzdlvejk");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [formResetKey, setFormResetKey] = useState(0);
+
+  const onSubmit = async (event) => {
+    await handleSubmit(event);
+    setShowSuccessModal(true);
+  };
+
+  const handleCloseSuccessModal = () => {
+    setShowSuccessModal(false);
+    setFormResetKey((prev) => prev + 1);
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = showSuccessModal ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showSuccessModal]);
+
   return (
     <section className="contact">
       <div className="container">
         <div className="contact-heading">
           <span>LET'S CONNECT</span>
 
-          <h2>
-            Let's Create Something
-            </h2>
-            <span> Beautiful Together.</span>
-          
+          <h2>Let's Create Something</h2>
+          <span> Beautiful Together.</span>
 
           <p>
             Whether you're booking a salon appointment or planning your next
@@ -82,17 +103,33 @@ function Contact() {
 
           {/* RIGHT */}
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={onSubmit} key={formResetKey}>
             <div className="row">
-              <input type="text" placeholder="Full Name" />
+              <input type="text" name="name" placeholder="Full Name" required />
 
-              <input type="email" placeholder="Email Address" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
             </div>
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+              className="form-error"
+            />
 
             <div className="row">
-              <input type="text" placeholder="Phone Number" />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
 
-              <select>
+              <select name="service" required>
                 <option>Select Service</option>
 
                 <option>Beauty by Tenny</option>
@@ -102,15 +139,44 @@ function Contact() {
             </div>
 
             <textarea
+              name="message"
               rows="8"
               placeholder="Tell us about your appointment or project..."
+              required
             ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+              className="form-error"
+            />
 
-            <button>
+            <button type="submit" disabled={state.submitting}>
               <FaPaperPlane />
-              Send Message
+              {state.submitting ? "Sending..." : "Send Message"}
             </button>
           </form>
+
+          {showSuccessModal && state.succeeded && (
+            <div
+              className="success-modal-overlay"
+              role="dialog"
+              aria-modal="true"
+            >
+              <div className="success-modal">
+                <button
+                  type="button"
+                  className="success-modal-close"
+                  onClick={handleCloseSuccessModal}
+                  aria-label="Close success message"
+                >
+                  ×
+                </button>
+                <h3>Message Sent ✅</h3>
+                <p>Thanks! Your message has been sent successfully.</p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
