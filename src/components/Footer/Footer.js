@@ -58,11 +58,11 @@ function Footer() {
             </p>
 
             <div className="social-icons">
-              <a href="#">
+              <a href="gallery">
                 <FaInstagram />
               </a>
 
-              <a href="#">
+              <a href="gallery">
                 <FaFacebookF />
               </a>
 
@@ -70,7 +70,7 @@ function Footer() {
                 <FaTiktok />
               </a>
 
-              <a href="#">
+              <a href="gallery">
                 <FaYoutube />
               </a>
             </div>

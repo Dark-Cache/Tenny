@@ -10,7 +10,7 @@ function Hero() {
         <div className="hero-content">
 
           <span className="hero-subtitle">
-            BEAUTY <span className="dot"> • </span> CONTENT CREATION <span className="dot"> • </span> LIFESTYLE
+            BEAUTY <span className="hero-dot"> • </span> CONTENT CREATION <span className="hero-dot"> • </span> LIFESTYLE
           </span>
 
           <h1>
