@@ -1,0 +1,123 @@
+/* ===========================================
+   LARGE DEVICES
+=========================================== */
+
+@media screen and (max-width: 1200px){
+
+    .container{
+        width:92%;
+    }
+
+}
+
+/* ===========================================
+   LAPTOP
+=========================================== */
+
+@media screen and (max-width: 992px){
+
+    h1{
+        font-size:3.3rem;
+    }
+
+    h2{
+        font-size:2.5rem;
+    }
+
+    h3{
+        font-size:1.8rem;
+    }
+
+    section{
+        padding:90px 0;
+    }
+
+}
+
+/* ===========================================
+   TABLET
+=========================================== */
+
+@media screen and (max-width:768px){
+
+    html{
+        font-size:95%;
+    }
+
+    h1{
+        font-size:2.8rem;
+    }
+
+    h2{
+        font-size:2.2rem;
+    }
+
+    h3{
+        font-size:1.6rem;
+    }
+
+    section{
+        padding:80px 0;
+    }
+
+    .container{
+        width:94%;
+    }
+
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media screen and (max-width:576px){
+
+    html{
+        font-size:90%;
+    }
+
+    h1{
+        font-size:2.3rem;
+    }
+
+    h2{
+        font-size:1.9rem;
+    }
+
+    h3{
+        font-size:1.4rem;
+    }
+
+    p{
+        font-size:.95rem;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+}
+
+/* ===========================================
+   SMALL MOBILE
+=========================================== */
+
+@media screen and (max-width:400px){
+
+    html{
+        font-size:87.5%;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.7rem;
+    }
+
+    .container{
+        width:95%;
+    }
+
+}
