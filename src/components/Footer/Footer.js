@@ -30,11 +30,11 @@ function Footer() {
               </li>
 
               <li>
-                <a href="#services">Services</a>
+                <a href="services">Services</a>
               </li>
 
               <li>
-                <a href="#gallery">Gallery</a>
+                <a href="gallery">Gallery</a>
               </li>
 
               <li>

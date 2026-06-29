@@ -24,11 +24,11 @@ function Navbar() {
             </li>
 
             <li>
-              <a href="#beauty">Beauty</a>
+              <a href="beauty">Beauty</a>
             </li>
 
             <li>
-              <a href="#shotit">Shot It</a>
+              <a href="shotit">Shot It</a>
             </li>
 
             <li>
