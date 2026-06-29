@@ -8,8 +8,7 @@ NAVBAR
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(10,10,10,.94);
-    /* backdrop-filter:blur(16px); */
+    background:rgba(0, 0, 0, 0.94);
     border-bottom:1px solid rgba(212,175,55,.08);
     transition:.35s ease;
 }
@@ -113,15 +112,6 @@ BUTTON
 .nav-btn:hover{
     transform:translateY(-3px);
     box-shadow:0 12px 25px rgba(212,175,55,.35);
-}
-
-/*==============================
-SCROLL EFFECT
-==============================*/
-
-.navbar.scrolled{
-    background:#0f0f0f;
-    box-shadow:0 12px 35px rgba(0,0,0,.35);
 }
 
 /*==============================

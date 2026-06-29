@@ -1,17 +1,16 @@
-import "./Contact.css";
-
+import { useEffect, useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import {
-  FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaTiktok,
   FaPaperPlane,
+  FaPhoneAlt,
+  FaTiktok,
 } from "react-icons/fa";
-import { useForm, ValidationError } from "@formspree/react";
-import { useEffect, useState } from "react";
+import "./Contact.css";
 
 function Contact() {
-  const [state, handleSubmit] = useForm("mzdlvejk");
+  const [state, handleSubmit] = useForm("xgojzbzy");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [formResetKey, setFormResetKey] = useState(0);
 
@@ -49,8 +48,6 @@ function Contact() {
         </div>
 
         <div className="contact-wrapper">
-          {/* LEFT */}
-
           <div className="contact-info">
             <div className="info-card">
               <div className="icon">
@@ -101,8 +98,6 @@ function Contact() {
             </div>
           </div>
 
-          {/* RIGHT */}
-
           <form className="contact-form" onSubmit={onSubmit} key={formResetKey}>
             <div className="row">
               <input type="text" name="name" placeholder="Full Name" required />
@@ -131,9 +126,7 @@ function Contact() {
 
               <select name="service" required>
                 <option>Select Service</option>
-
                 <option>Beauty by Tenny</option>
-
                 <option>Tenny Shot It</option>
               </select>
             </div>
@@ -170,9 +163,9 @@ function Contact() {
                   onClick={handleCloseSuccessModal}
                   aria-label="Close success message"
                 >
-                  ×
+                  &times;
                 </button>
-                <h3>Message Sent ✅</h3>
+                <h3>Message Sent</h3>
                 <p>Thanks! Your message has been sent successfully.</p>
               </div>
             </div>

@@ -1,0 +1,347 @@
+/*=========================
+    BEAUTY BY TENNY
+==========================*/
+
+:root {
+  --beauty-bg: #f8f5f1;
+  --beauty-text: #161616;
+  --beauty-muted: #6b6b6b;
+  --beauty-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --beauty-transition: 0.45s ease;
+}
+
+.beauty-section {
+  width: 100%;
+  background: var(--beauty-bg);
+  padding: 0 6%;
+  overflow: hidden;
+}
+
+/*=========================
+      LOGO CAROUSEL
+==========================*/
+
+.beauty-logo-carousel {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+}
+
+.beauty-logo-track {
+  display: flex;
+  width: max-content;
+  animation: beautyLogoScroll 26s linear infinite;
+}
+
+.beauty-logo-set {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+}
+
+.beauty-logo-card {
+  flex: 0 0 auto;
+  width: clamp(120px, 16vw, 190px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.beauty-logo-card img {
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+}
+
+/*=========================
+        TOP
+==========================*/
+
+.beauty-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 22px;
+  margin-top: -8px;
+}
+
+.beauty-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.beauty-title h2 {
+  font-size: 34px;
+  line-height: 0.95;
+  font-weight: 300;
+  color: var(--beauty-text);
+  letter-spacing: 0;
+  font-family: "Inter";
+}
+
+.beauty-line {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 6px;
+}
+
+.beauty-line span {
+  width: 100%;
+  height: 2px;
+  background: #e4bc5e;
+}
+
+.beauty-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e4bc5e;
+}
+
+/*=========================
+     CONTENT
+==========================*/
+
+.beauty-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+
+.beauty-description {
+  max-width: 600px;
+}
+
+.beauty-description p {
+  color: var(--beauty-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/*=========================
+      BUTTON
+==========================*/
+
+.discover-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 5px 5px 20px;
+  border: none;
+  border-radius: 100px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.discover-btn span {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.discover-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e4bc5e;
+  color: #111;
+  transition: 0.35s;
+}
+
+.discover-btn:hover {
+  transform: translateY(-8px);
+}
+
+.discover-btn:hover .discover-icon {
+  transform: rotate(-45deg);
+}
+
+/*=========================
+     GALLERY
+==========================*/
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  cursor: default;
+  padding-bottom: 25px;
+}
+
+.gallery-card {
+  flex: 0 0 calc((100% - 60px) / 3);
+  height: 400px;
+  overflow: hidden;
+  border-radius: 32px;
+  background: white;
+  box-shadow: var(--beauty-shadow);
+  transition: var(--beauty-transition);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: inherit;
+  transition: 0.7s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/*=========================
+      ANIMATIONS
+==========================*/
+
+.beauty-title,
+.beauty-description,
+.discover-btn,
+.gallery-card {
+  animation: fadeUp 0.8s ease both;
+}
+
+.gallery-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.gallery-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes beautyLogoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*=========================
+     RESPONSIVE
+==========================*/
+
+@media (max-width: 1200px) {
+  .gallery-card {
+    flex: 0 0 calc((100% - 30px) / 2);
+    height: 240px;
+  }
+}
+
+@media (max-width: 991px) {
+  .beauty-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .beauty-line {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .beauty-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .beauty-section {
+    padding: 0 8px;
+  }
+
+  .beauty-logo-card {
+    width: 105px;
+  }
+
+  .beauty-top {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .beauty-title h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+
+  .beauty-content {
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .beauty-description p {
+    line-height: 1.6;
+  }
+
+  .gallery {
+    gap: 20px;
+  }
+
+  .gallery-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    height: 180px;
+    border-radius: 20px;
+  }
+
+  .discover-btn {
+    width: auto;
+    min-width: 0;
+    align-self: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .beauty-logo-set {
+    gap: 16px;
+    padding-right: 16px;
+  }
+
+  .gallery-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    height: 160px;
+    border-radius: 16px;
+  }
+}

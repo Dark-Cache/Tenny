@@ -1,32 +1,24 @@
 import "./About.css";
 
-// Image
-import AboutImage from "../../assets/About.jpg"
+import AboutImage from "../../assets/About.jpg";
 
 function About() {
   return (
-    <section className="about" id="about">
+    <section className="about">
       <div className="container">
-        {/* <span className="hero-subtitle">
-            BEAUTY <span className="dot"> • </span> CONTENT CREATION <span className="dot"> • </span> LIFESTYLE
-          </span> */}
         <div className="about-grid">
-          {/* Image */}
-
           <div className="about-image">
             <img src={AboutImage} alt="Beauty by Tenny" />
 
             <div className="experience-card">
               <h2>Since 2024</h2>
 
-              <span>Beauty • Creativity • Excellence</span>
+              <span>Beauty &bull; Creativity &bull; Excellence</span>
             </div>
           </div>
 
-          {/* Content */}
-
           <div className="about-content">
-            <span className="section-tag"> Our Story</span>
+            <span className="section-tag">Our Story</span>
 
             <h2>
               Creating Beauty,
@@ -44,7 +36,7 @@ function About() {
 
             <p>
               Every appointment, every photograph and every project is designed
-              with one goal in mind—helping our clients look their best, feel
+              with one goal in mind: helping our clients look their best, feel
               confident and tell unforgettable stories.
             </p>
 
@@ -68,7 +60,7 @@ function About() {
               </div>
 
               <div className="stat-card">
-                <h3>4.2★</h3>
+                <h3>4.2/5</h3>
 
                 <p>Customer Rating</p>
               </div>

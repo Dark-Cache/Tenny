@@ -19,7 +19,6 @@
   height: 650px;
   object-fit: cover;
   border-radius: 20px;
-  color: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
 }
 
 .experience-card {
@@ -46,13 +45,12 @@
 
 .section-tag {
   display: inline-block;
-  color: #d4af37;
   letter-spacing: 4px;
   font-size: 10px;
   margin-bottom: 10px;
   background: #76642a;
   color: white;
-  border: 2px #d4af37;
+  border: 2px solid #d4af37;
   padding: 10px 20px;
   border-radius: 20px;
   font-weight: 500;
@@ -184,13 +182,6 @@
   }
 
   .experience-card {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin-top: 0px;
-  }
-
-  .experience-card {
     position: absolute;
     bottom: -30px;
     right: 0px;
@@ -207,18 +198,8 @@
 
   .about-btn {
     width: 100%;
-    align-items: center;
     text-align: center;
-  }
-
-  .about-btn {
     display: inline-block;
     padding: 16px 20px;
-    background: #d4af37;
-    color: #111;
-    border-radius: 40px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.35s;
   }
 }

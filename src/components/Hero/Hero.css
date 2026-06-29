@@ -6,14 +6,12 @@ HERO
   min-height: 100vh;
   display: flex;
   align-items: center;
-    background:
+  background:
     linear-gradient(
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.6)
     ),
     url("../../assets/Hero.jpg");
-  /* background-image: url("../../assets/Hero.jpg"); */
-  /* background:url("/empire/src/assets/Hero.jpg") center center/cover no-repeat; */
   overflow: hidden;
 }
 
@@ -130,7 +128,6 @@ CARD
 
 .hero-card {
   background: rgba(255, 255, 255, 0.05);
-  /* backdrop-filter:blur(16px); */
   padding: 40px;
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -148,7 +145,6 @@ CARD
 
 .hero-card span {
   color: white;
-  /* color: #d4af37; */
   font-size: 0.8rem;
   letter-spacing: 3px;
 }
@@ -285,15 +281,10 @@ RESPONSIVE
     font-size: 2.7rem;
     padding-top: 5px;
     line-height: 1.1;
-    /* font-size: 40px; */
   }
 
   .hero-content p {
     font-size: 16px;
-  }
-
-  .hero-buttons {
-    flex-direction: block;
   }
 
   .primary-btn,

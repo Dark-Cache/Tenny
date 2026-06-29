@@ -4,14 +4,10 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="container nav-container">
-        {/* Logo */}
-
         <a href="#home" className="logo">
           <span>TENNY'S</span>
           <h2>EMPIRE</h2>
         </a>
-
-        {/* Navigation */}
 
         <nav>
           <ul className="nav-links">
@@ -40,8 +36,6 @@ function Navbar() {
             </li>
           </ul>
         </nav>
-
-        {/* CTA */}
 
         <a href="#contact" className="nav-btn">
           Book Now

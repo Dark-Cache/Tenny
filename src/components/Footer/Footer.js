@@ -1,22 +1,19 @@
-import "./Footer.css";
-
 import {
-  FaInstagram,
+  FaEnvelope,
   FaFacebookF,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
   FaTiktok,
   FaYoutube,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
 } from "react-icons/fa";
+import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          {/* Left */}
-
           <div className="footer-links">
             <h3>Explore</h3>
 
@@ -47,14 +44,13 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Center */}
-
           <div className="footer-brand">
             <h2>TENNY'S EMPIRE</h2>
 
             <p>
               Home to
-              <strong> Beauty by Tenny </strong>&<strong> Tenny Shot It</strong>
+              <strong> Beauty by Tenny </strong>&amp;
+              <strong> Tenny Shot It</strong>
             </p>
 
             <div className="social-icons">
@@ -75,8 +71,6 @@ function Footer() {
               </a>
             </div>
           </div>
-
-          {/* Right */}
 
           <div className="footer-contact">
             <h3>Contact</h3>
@@ -111,7 +105,8 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Tenny's Empire. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Tenny's Empire. All Rights
+            Reserved.
           </p>
         </div>
       </div>
