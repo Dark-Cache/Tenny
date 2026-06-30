@@ -13,7 +13,7 @@ function About() {
             <div className="experience-card">
               <h2>Since 2024</h2>
 
-              <span>Beauty &bull; Creativity &bull; Excellence</span>
+              <span>Beauty &bull; Confidence &bull; You</span>
             </div>
           </div>
 

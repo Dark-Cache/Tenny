@@ -2,7 +2,8 @@ import "./Shot.css";
 
 import { FaPlay, FaFilm, FaCut, FaVideo } from "react-icons/fa";
 
-// import heroImg from "../../assets/video-editor.png"; // Change to your image
+import Camera from "../../assets/Camera.png"; 
+// import Camera from "../../assets/Try.jpg"; 
 
 const VideoEditor = () => {
   return (
@@ -67,7 +68,6 @@ const VideoEditor = () => {
             <a href="#contact" className="primary-btn">
                   Initiate Project
                 </a>
-            {/* <button href="#contact" className="primary-btn">Initiate Project</button> */}
           </div>
         </div>
 
@@ -76,11 +76,11 @@ const VideoEditor = () => {
         <div className="video-right">
           <div className="brush-bg"></div>
 
-          {/* <img
-            src={heroImg}
+          <img
+            src={Camera}
             alt="Video Editor"
             className="hero-image"
-          /> */}
+          />
 
           {/* Floating Icons */}
 
