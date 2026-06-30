@@ -1,43 +1,65 @@
 import "./Navbar.css";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="navbar">
       <div className="container nav-container">
-        <a href="#home" className="logo">
+        <a href="#home" className="logo" onClick={closeMenu}>
           <span>TENNY'S</span>
           <h2>EMPIRE</h2>
         </a>
 
-        <nav>
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        <nav
+          id="primary-navigation"
+          className={isMenuOpen ? "nav-menu active" : "nav-menu"}
+        >
           <ul className="nav-links">
             <li>
-              <a href="#home">Home</a>
+              <a href="#home" onClick={closeMenu}>Home</a>
             </li>
 
             <li>
-              <a href="#about">About</a>
+              <a href="#about" onClick={closeMenu}>About</a>
             </li>
 
             <li>
-              <a href="beauty">Beauty</a>
+              <a href="#beauty" onClick={closeMenu}>Beauty</a>
             </li>
 
             <li>
-              <a href="shotit">Shot It</a>
+              <a href="#shotit" onClick={closeMenu}>Shot It</a>
             </li>
 
             <li>
-              <a href="#testimonials">Reviews</a>
+              <a href="#testimonials" onClick={closeMenu}>Reviews</a>
             </li>
 
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={closeMenu}>Contact</a>
             </li>
           </ul>
         </nav>
 
-        <a href="#contact" className="nav-btn">
+        <a href="#contact" className="nav-btn" onClick={closeMenu}>
           Book Now
         </a>
       </div>

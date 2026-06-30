@@ -235,6 +235,9 @@ gap:18px;
 }
 
 @media(max-width:576px){
+    .testimonial{
+    padding:70px 0;
+}
 
 .testimonial-title h2{
 font-size:30px;

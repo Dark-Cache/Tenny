@@ -81,6 +81,7 @@ function Process() {
         </div>
 
       </div>
+      <div id="beauty"></div>
     </section>
   );
 }

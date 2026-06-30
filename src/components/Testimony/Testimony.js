@@ -57,7 +57,7 @@ function Testimonial() {
   }, [current]);
 
   return (
-    <section className="testimonial" id="testimonials">
+    <section className="testimonial">
       <div className="container">
         <div className="testimonial-title">
           <span>CLIENT REVIEWS</span>

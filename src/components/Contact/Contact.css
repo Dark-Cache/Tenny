@@ -247,6 +247,11 @@
 }
 
 @media (max-width: 576px) {
+
+  .contact {
+  padding: 0px 0;
+}
+
   .contact-heading h2 {
     font-size: 32px;
   }
